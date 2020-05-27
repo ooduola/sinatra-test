@@ -17,7 +17,13 @@ get '/name' do
   "My name is Ola"
 end
 
-get '/cat' do
+get '/random_cat' do
   @sample_name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named_cat' do
+  p params
+  @sample_name = params[:name]
   erb(:index)
 end

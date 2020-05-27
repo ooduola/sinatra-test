@@ -1,3 +1,10 @@
-"<div style='border: 3px dashed red'> <img src='http://bit.ly/1eze8aE'> <div/>"
+<div style='border: 3px dashed red'> <img src='http://bit.ly/1eze8aE'> <div/>
 
-<h1>My name is Ola<%=@sample_name%></h1>
+<% if @sample_name %>
+  <h1>My name is Ola<%=@sample_name%></h1>
+<% end %>
+
+<form action="/named_cat">
+  <input type="text" name="name">
+  <input type="submit" value=Submit>
+</form>
